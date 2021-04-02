@@ -4,44 +4,6 @@ matrix:
   fast_finish: true
   include:
     - php: 8.0
-      dist: trusty
-      sudo: true
-      env:
-        - DEPENDENCIES=""
-        - DRIVER="pdo_mysql"
-        - DB=mariadb_10.2
-      addons:
-          mariadb: '10.2'
-    - php: 8.0
-      dist: trusty
-      sudo: true
-      env:
-        - DEPENDENCIES="--prefer-lowest --prefer-stable"
-        - DRIVER="pdo_mysql"
-        - DB=mariadb_10.2
-      addons:
-          mariadb: '10.2'
-    - php: 8.0
-      dist: trusty
-      sudo: true
-      env:
-        - DEPENDENCIES=""
-        - DRIVER="pdo_mysql"
-        - DB=mariadb_10.2
-        - DB_ATTR_ERRMODE=2 # \PDO::ERRMODE_EXCEPTION
-      addons:
-          mariadb: '10.2'
-    - php: 8.0
-      env:
-        - DEPENDENCIES=""
-        - DRIVER="pdo_mysql"
-        - DB=mysql_5_6
-    - php: 8.0
-      env:
-        - DEPENDENCIES="--prefer-lowest --prefer-stable"
-        - DRIVER="pdo_mysql"
-        - DB=mysql_5_6
-    - php: 8.0
       sudo: true
       env:
         - DEPENDENCIES=""
